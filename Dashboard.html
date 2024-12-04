@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Dashboard</h1>
+    
+    <!-- Add New Blog Section -->
+    <section class="mb-5">
+      <h2>Add New Blog</h2>
+      <form id="blog-form">
+        <div class="mb-3">
+          <label for="blog-title" class="form-label">Blog Title</label>
+          <input type="text" class="form-control" id="blog-title" placeholder="Enter blog title" required>
+        </div>
+        <div class="mb-3">
+          <label for="blog-image" class="form-label">Blog Image</label>
+          <input type="file" class="form-control" id="blog-image" required>
+        </div>
+        <div class="mb-3">
+          <label for="blog-description" class="form-label">Blog Description</label>
+          <textarea class="form-control" id="blog-description" rows="3" placeholder="Enter blog description" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Blog</button>
+      </form>
+    </section>
+    
+    <!-- Update Contact Details Section -->
+    <section class="mb-5">
+      <h2>Update Contact Details</h2>
+      <form id="contact-form">
+        <div class="mb-3">
+          <label for="contact-email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="contact-email" placeholder="Enter email address" required>
+        </div>
+        <div class="mb-3">
+          <label for="contact-phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="contact-phone" placeholder="Enter phone number" required>
+        </div>
+        <div class="mb-3">
+          <label for="contact-address" class="form-label">Office Address</label>
+          <textarea class="form-control" id="contact-address" rows="2" placeholder="Enter office address" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Contact</button>
+      </form>
+    </section>
+    
+    <!-- Manage Working Hours Section -->
+    <section class="mb-5">
+      <h2>Manage Working Hours</h2>
+      <form id="hours-form">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="monday-hours" class="form-label">Monday</label>
+            <input type="text" class="form-control" id="monday-hours" placeholder="e.g., 09:00 - 22:00" required>
+          </div>
+          <div class="col-md-4">
+            <label for="tuesday-hours" class="form-label">Tuesday</label>
+            <input type="text" class="form-control" id="tuesday-hours" placeholder="e.g., 09:00 - 22:00" required>
+          </div>
+          <div class="col-md-4">
+            <label for="wednesday-hours" class="form-label">Wednesday</label>
+            <input type="text" class="form-control" id="wednesday-hours" placeholder="e.g., 09:00 - 22:00" required>
+          </div>
+        </div>
+        <!-- Repeat for all days -->
+        <button type="submit" class="btn btn-primary mt-3">Update Hours</button>
+      </form>
+    </section>
+    
+    <!-- Inquiry List Section -->
+    <section>
+      <h2>Manage Inquiries</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>+123456789</td>
+            <td>john.doe@example.com</td>
+            <td>Hello, I need assistance.</td>
+            <td>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <!-- More rows dynamically -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
